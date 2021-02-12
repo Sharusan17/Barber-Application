@@ -23,7 +23,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="80dp"
         android:gravity="center"
-        Íapp:btn_text="Get Started"
+        app:btn_text="Get Started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

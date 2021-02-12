@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         loginbtn.setOnSwipeListener(new ProSwipeButton.OnSwipeListener() {
             @Override
             public void onSwipeConfirm() {
+                finish();
                 startActivity(new Intent(getApplicationContext(), LoginScreen.class));
             }
         });

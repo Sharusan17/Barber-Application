@@ -1,7 +1,5 @@
 package com.example.barberapplication;
 
-//todo: draw the homepage of the barber app
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,7 +59,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.forgetpw:
-                startActivity(new Intent(getApplicationContext(), Forgetpassword.class));
+                startActivity(new Intent(LoginScreen.this,Forgetpassword.class));
                 break;
         }
     }
@@ -97,6 +95,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                 if (task.isSuccessful()) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()){
+                        finish();
                         startActivity(new Intent(LoginScreen.this, MenuScreen.class));
                     }else{
                         user.sendEmailVerification();

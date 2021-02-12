@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -112,7 +111,9 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        startActivity(new Intent(RegisterScreen.this, MenuScreen.class));
+                                        finish();
+                                        Intent intent = new Intent(RegisterScreen.this, MenuScreen.class);
+                                        startActivity(intent);
                                         Toast.makeText(RegisterScreen.this, "User Register", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }else{
@@ -130,8 +131,8 @@ public class RegisterScreen extends AppCompatActivity implements View.OnClickLis
         });
     }
 
+
     @Override
     public void onClick(View view) {
-
     }
 }
