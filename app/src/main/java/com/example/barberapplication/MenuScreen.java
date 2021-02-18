@@ -3,8 +3,12 @@ package com.example.barberapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,6 +25,7 @@ public class MenuScreen extends AppCompatActivity {
     TextView showtext;
     FirebaseAuth mAuth;
     DatabaseReference reff;
+    ImageButton autojoinbtn;
 
 
     @Override
@@ -43,6 +48,17 @@ public class MenuScreen extends AppCompatActivity {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+            }
+
+
+        });
+
+        autojoinbtn = findViewById(R.id.AutoJoinbtn);
+
+        autojoinbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuScreen.this, AutoJoin.class));
             }
         });
 

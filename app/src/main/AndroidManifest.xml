@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Forgetpassword"></activity>
+        <activity android:name=".AutoJoin"></activity>
+        <activity android:name=".Forgetpassword" />
         <activity android:name=".MenuScreen" />
         <activity android:name=".RegisterScreen" />
         <activity android:name=".LoginScreen" />
