@@ -25,7 +25,7 @@ public class MenuScreen extends AppCompatActivity {
     TextView showtext;
     FirebaseAuth mAuth;
     DatabaseReference reff;
-    ImageButton autojoinbtn;
+    ImageButton autojoinbtn,bookappointbtn;
 
 
     @Override
@@ -59,6 +59,15 @@ public class MenuScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuScreen.this, AutoJoin.class));
+            }
+        });
+
+        bookappointbtn = findViewById(R.id.BookAppointbtn);
+
+        bookappointbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuScreen.this, BookAppointment.class));
             }
         });
 

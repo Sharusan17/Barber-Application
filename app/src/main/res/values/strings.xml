@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Barber Application</string>
+
+    <string-array name="names">
+        <item>Barber 1</item>
+        <item>Barber 2</item>
+        <item>Barber 3</item>
+        <item>Barber 4</item>
+        <item>Barber 5</item>
+    </string-array>
+
 </resources>
